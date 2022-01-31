@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ELKInterviewTest.Domain
+﻿namespace ELKInterviewTest.Domain
 {
     public class ManagementCompanies
     {

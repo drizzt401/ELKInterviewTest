@@ -1,16 +1,16 @@
 ﻿using ELKInterviewTest.Application.Indexer;
 using ELKInterviewTest.Application.Managers;
 using ELKInterviewTest.Domain;
+using ELKInterviewTest.Domain.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Nest;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Runtime.ExceptionServices;
 using System.Threading;
 using System.Threading.Tasks;
-using ELKInterviewTest.Domain.Models;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json.Linq;
 
 namespace ELKInterviewTest.Infrastructure.Indexer
 {
@@ -82,7 +82,7 @@ namespace ELKInterviewTest.Infrastructure.Indexer
             #endregion
         }
 
-        private async Task CreateIndexAsync<T>(CancellationToken cancellationToken) where T: class
+        private async Task CreateIndexAsync<T>(CancellationToken cancellationToken) where T : class
         {
             try
             {
@@ -92,7 +92,7 @@ namespace ELKInterviewTest.Infrastructure.Indexer
                     .Settings(s => s
                         .NumberOfShards(2)
                         .NumberOfReplicas(0)
-                        .Analysis(InitCommonAnalyzers)                      
+                        .Analysis(InitCommonAnalyzers)
                 ), cancellationToken);
 
                 await client.Indices.PutAliasAsync(indexName, $"{indexName}List", ct: cancellationToken);

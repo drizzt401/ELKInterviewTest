@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ELKInterviewTest.Domain.Models
+﻿namespace ELKInterviewTest.Domain.Models
 {
     public class ApartmentProperties
     {

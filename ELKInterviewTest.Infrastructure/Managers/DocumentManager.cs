@@ -1,9 +1,7 @@
 ﻿using ELKInterviewTest.Application.Managers;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -34,7 +32,7 @@ namespace ELKInterviewTest.Infrastructure.Managers
 
                     List<T> objectList = JsonConvert.DeserializeObject<List<T>>(objectListJson.Trim(), new JsonSerializerSettings
                     {
-                       Error = HandleDeserializationError
+                        Error = HandleDeserializationError
                     });
 
                     return objectList;

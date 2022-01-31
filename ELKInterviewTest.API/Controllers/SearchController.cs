@@ -25,7 +25,7 @@ namespace ELKInterviewTest.API.Controllers
         public async Task<IActionResult> Search(string searchPhrase, [FromQuery] string[] market, [FromQuery] int limit = 25)
         {
             var responseViewModel = await _mediator.Send(new SearchQuery { SearchPhrase = searchPhrase, Market = market, Size = limit });
-            if (responseViewModel.Data is null) 
+            if (responseViewModel.Data is null)
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error has occured");
             return Ok(responseViewModel.Data);
         }

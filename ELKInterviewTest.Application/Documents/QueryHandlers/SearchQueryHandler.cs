@@ -51,7 +51,7 @@ namespace ELKInterviewTest.Application.Documents.QueryHandlers
         {
 
             string markets = string.Join(" ", request.Market);
-           
+
             return await client.SearchAsync<JObject>(s => s
             .Index($"{propertyIndex}, {managementCompanyIndex}")
             .Query(q => q
@@ -80,7 +80,7 @@ namespace ELKInterviewTest.Application.Documents.QueryHandlers
                  .Fields(f => f.Fields("property.name", "property.formerName", "mgmt.name"))
                  )
                 )
-                .From(0)                
+                .From(0)
                 .Size(request.Size)
             );
         }

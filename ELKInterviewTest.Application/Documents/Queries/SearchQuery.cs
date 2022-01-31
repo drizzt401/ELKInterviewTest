@@ -1,9 +1,5 @@
 ﻿using ELKInterviewTest.Application.ViewModels;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ELKInterviewTest.Application.Documents.Queries
 {

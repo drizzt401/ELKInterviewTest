@@ -1,5 +1,4 @@
-﻿using ELKInterviewTest.Domain;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ELKInterviewTest.Application.Managers

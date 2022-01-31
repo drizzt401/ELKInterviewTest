@@ -1,20 +1,14 @@
-using Elasticsearch.Net;
-using ELKInterviewTest.Domain;
+using ELKInterviewTest.Application.Indexer;
+using ELKInterviewTest.Application.Managers;
+using ELKInterviewTest.Infrastructure;
+using ELKInterviewTest.Infrastructure.ElasticSearchConfig;
+using ELKInterviewTest.Infrastructure.Indexer;
+using ELKInterviewTest.Infrastructure.Managers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Nest;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Serilog;
-using ELKInterviewTest.Infrastructure;
-using ELKInterviewTest.Application.Managers;
-using ELKInterviewTest.Infrastructure.Managers;
-using ELKInterviewTest.Application.Indexer;
-using ELKInterviewTest.Infrastructure.Indexer;
-using ELKInterviewTest.Infrastructure.ElasticSearchConfig;
 
 namespace ELKInterviewTest.Ingest
 {
