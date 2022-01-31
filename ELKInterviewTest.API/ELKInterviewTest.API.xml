@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ELKInterviewTest.API</name>
+    </assembly>
+    <members>
+        <member name="M:ELKInterviewTest.API.Controllers.SearchController.Search(System.String,System.String[],System.Int32)">
+            <summary>
+            Used to search for a document on Elasticsearch
+            </summary>
+            <remarks>Search results can be filtered based on "market"</remarks>
+        </member>
+    </members>
+</doc>
